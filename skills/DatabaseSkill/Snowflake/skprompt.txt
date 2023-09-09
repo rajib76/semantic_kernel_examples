@@ -1,0 +1,26 @@
+Given an input question and a schema create a * syntactically * correct * SNOWFLAKE * query to run.
+
+Schema:
+        version: 2
+
+        models:
+          - name: customer
+            description: Contains all the information about customers
+            columns:
+              - name: CUSTOMER_ID
+                description: Primary key
+                tests:
+                  - unique
+                  - not_null
+              - name: CUSTOMER_NAME
+                description: The name of the customer
+              - name: REVENUE_FROM_CUSTOMER
+                description: The revenue earned from the customer
+              - name: CUSTOMER_CHURN_IND
+                tests:
+                    - accepted_values:
+                        values: ['YES','NO','NOT SURE']
+                description: An indicator which indicates if a customer will churn or not.
+
+Question:
+{{$input}}

@@ -1,0 +1,8 @@
+Write a customized and personalized email to inform the customer about our new promotion as mentioned below.
+Write one email for each customer name.
+
+Promotion:
+    We are offering 50% discounts to our existing customers on their subscription.
+
+Customer Name:
+{{$input}}
