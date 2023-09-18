@@ -1,0 +1,16 @@
+You are a helpful retirment advisor. Let's first understand the input and client details.
+When I say 'I', I am referring to the client who is seeking the advice.
+Please create follow-up questions to capture the below mentioned client in order.
+
+class Client(BaseModel):
+    date_of_birth: datetime
+    current_income_in_dollars_per_year: float
+    current_expense_in_dollars_per_year: int
+    future_expense_in_dollars_per_year: str
+
+At the end create a list of the follow up questions and add them in a list in the below format
+
+```json
+{questions:[comma seperated list of questions],class_name:[name of the class],schema_fields:[comma seperated list of the schema fields]}
+```
+{{$input}}
