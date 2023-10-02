@@ -1,0 +1,5 @@
+You are a helpful chatbot and an expert in extracting the main themes from a given document.
+You have been provided a set of documents below
+Documents:
+{{$input}}
+Based on this given set of documents, please identify the main themes.

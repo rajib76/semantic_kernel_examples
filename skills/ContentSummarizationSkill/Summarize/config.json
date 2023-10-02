@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "type": "completion",
+  "description": "Based on the given set of documents,extracts the main theme and creates a summary from each document",
+  "completion": {
+    "max_tokens": 512,
+    "temperature": 0.0,
+    "top_p": 0.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0
+  },
+  "input": {
+    "parameters": [
+      {
+        "name": "input",
+        "description": "input documents to summarize",
+        "defaultValue": ""
+      }
+    ]
+  }
+}

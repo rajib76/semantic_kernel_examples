@@ -11,7 +11,7 @@ kernel = sk.Kernel()
 api_key, org_id = sk.openai_settings_from_dot_env()
 kernel.add_chat_service("gpt-3.5", OpenAIChatCompletion("gpt-3.5-turbo", api_key, org_id))
 
-skills_directory = "./skills"
+#skills_directory = "./skills"
 prime_identifier_skill = kernel.import_skill(IdentifyPrime(),"IdentifyPrime")
 
 goal = "check if {number} is prime"

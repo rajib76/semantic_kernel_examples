@@ -28,8 +28,24 @@ planner = SequentialPlanner(kernel,prompt=PROMPT)
 
 sequential_plan = asyncio.run(planner.create_plan_async(goal=ask))
 
-# for step in sequential_plan._steps:
-#     print(step.description, ":", step._state.__dict__)
 
+# Plan(
+#                     name=step.name,
+#                     skill_name=step.skill_name,
+#                     description=step.description,
+#                     next_step_index=0,
+#                     state=ContextVariables(),
+#                     parameters=ContextVariables(),
+#                     outputs=[],
+#                     steps=[],
+#                 )
+
+
+# for step in sequential_plan._steps:
+#     print(step.parameters)
+
+kernel.remove_chat_service("gpt-3.5")
+kernel.add_chat_service("text-davinci-003", OpenAIChatCompletion("text-davinci-003", api_key, org_id))
 result = asyncio.run(sequential_plan.invoke_async())
+print("model is:", kernel.get_chat_service_service_id())
 print("final result is \n\n", result)
