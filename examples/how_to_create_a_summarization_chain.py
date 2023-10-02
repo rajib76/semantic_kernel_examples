@@ -18,7 +18,8 @@ class Document():
     page_content: str
     metadata: dict = Field(default_factory=dict)
 
-
+# Borrowed from Langchain TextLoader
+# Below code is borrowed from Langchain's TextLoader implementation
 class FileEncoding(NamedTuple):
     """File encoding as the NamedTuple."""
 
@@ -103,7 +104,7 @@ class TextContentLoader(ContentLoader):
 
         metadata = {"source": self.content_path}
         return [Document(page_content=text, metadata=metadata)]
-
+# Borrowed from Langchain TextLoader
 
 if __name__=="__main__":
 
