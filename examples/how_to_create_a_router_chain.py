@@ -1,5 +1,6 @@
 # Author: Rajib
 # Description: This is an example of how to create a router chain using semantic kernel
+# It uses the Router Chain class in router_chain.py
 import semantic_kernel as sk
 
 from semantic_kernel.connectors.ai.open_ai.services.open_ai_chat_completion import OpenAIChatCompletion
