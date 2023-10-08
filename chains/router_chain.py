@@ -23,7 +23,7 @@ class RouterChain(Chain):
     ```
     Always REMEMBER "prompt_name" must be one of the available prompt names given below OR it can be
     "DEFAULT" if the input does not suit any of the provided prompt names.
-    The next_inputs can be the original input, if no modifications are needed.
+    The modified_input can be the original input, if no modifications are needed.
     
     [AVAILABLE PROMPTS]
     {{$prompt_names}}
