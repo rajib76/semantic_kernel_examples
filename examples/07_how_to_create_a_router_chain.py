@@ -43,8 +43,8 @@ if __name__ == "__main__":
     kernel.add_chat_service("gpt-4", OpenAIChatCompletion("gpt-4", api_key))
 
     # The question to be asked to the router chain. I used this for testing
-    input = "Where is TajMahal?"
-    # input = "When did India became independent?"
+    # input = "Where is TajMahal?"
+    input = "When did India became independent?"
 
     rtc = RouterChain()
     # After the chain runs, it sends back the appropiate goal(prompt template)
@@ -57,6 +57,7 @@ if __name__ == "__main__":
     sk_context = kernel.create_new_context()
     sk_context["question"] = input
 
+    # Destination chain
     qa_chat_bot = kernel.create_semantic_function(
         prompt_template=goal,
         description="Provides answer to an input question",

@@ -1,2 +1,4 @@
 semantic-kernel
 snowflake-connector-python
+pyautogen
+sympy
